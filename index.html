@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Layout</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            padding: 20px;
+            background-color: #f4f4f4; 
+        }
+
+        table {
+            border-collapse: collapse;
+            width: 60%; 
+            max-width: 800px; 
+        }
+
+        th, td {
+            border: 1px solid #ddd;
+            text-align: center;
+            padding: 10px;
+        }
+
+        .search-row {
+            background-color: #e0f7fa; 
+        }
+
+        .empty-row {
+            background-color: #b2ebf2; 
+        }
+
+        .header-row {
+            background-color: #c8e6c9; 
+        }
+
+        .content-row {
+            background-color: #bbdefb; 
+        }
+
+        .signup-row {
+            background-color: #c5cae9;
+        }
+
+        .feature-container {
+            display: flex; 
+            justify-content: space-between; 
+            width: 100%; 
+        }
+
+        .feature {
+            background-color: #f4f4f4; 
+            margin: 5px; 
+            padding: 10px;
+            border: none;
+            flex: 1; 
+        }
+
+        .white-ball {
+            display: inline-block;
+            width: 8px; 
+            height: 8px;
+            border-radius: 50%;
+            background: white;
+            margin-left: 5px;
+        }
+
+        @media (max-width: 768px) {
+            table {
+                width: 100%; 
+            }
+
+            td {
+                display: block; 
+                padding: 20px; 
+                width: auto; 
+            }
+
+            .feature-container {
+                flex-direction: row; 
+                width: 100%; 
+            }
+
+            .feature {
+                flex: 1; 
+                margin: 5px 0; 
+            }
+        }
+
+        @media (max-width: 500px) {
+            .feature-container {
+                flex-direction: column; 
+            }
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr class="search-row">
+            <td>
+                <input type="text" placeholder="Search...">
+                <div class="white-ball"></div>
+                <div class="white-ball"></div>
+                <div class="white-ball"></div>
+            </td>
+        </tr>
+        <tr class="empty-row">
+            <td></td>
+        </tr>
+        <tr class="header-row">
+            <td>Header</td>
+        </tr>
+        <tr class="content-row">
+            <td>Content</td>
+        </tr>
+        <tr class="signup-row">
+            <td>Sign Up</td>
+        </tr>
+        <tr class="feature-row">
+            <td>
+                <div class="feature-container">
+                    <div class="feature">Feature 1</div>
+                    <div class="feature">Feature 2</div>
+                    <div class="feature">Feature 3</div>
+                </div>
+            </td>
+        </tr>
+    </table>
+</body>
+</html>
